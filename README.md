@@ -1,6 +1,6 @@
 This Kea hook creates the RFC3527 "link-selection" RAI sub-option 5 from Cisco's proprietary link-selection sub-option 150.
 
-Kea uses the RFC3527 sub-option during subnet selection, but it does not use Cisco's sub-option 151 hence the reason for this hook.  It saves you from having to create custom client-classes for every subnet.
+Kea natively uses the RFC3527 sub-option during subnet selection, but it does not use Cisco's sub-option 150.  So this hook copies the value from sub-option 150 into sub-option 5 (so long as sub-option 5 didn't already exist).  This saves you from having to create a custom client-class that matches Cisco's sub-option 150 for every subnet.
 
 
 Installation on Ubuntu:
