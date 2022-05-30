@@ -35,7 +35,7 @@ extern "C" {
         if (cisco_linksel) {
             LOG_INFO(hook_logger, "Creating RAI link-selection sub-option from Cisco's link-selection sub-option");
             pkt4->addOption(
-                Option::factory(Option::V4, RAI_OPTION_LINK_SELECTION, cisco_linksel->getData())
+                Option::create(Option::V4, RAI_OPTION_LINK_SELECTION, cisco_linksel->getData())
             );
         }
         
